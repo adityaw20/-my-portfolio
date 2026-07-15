@@ -7,7 +7,7 @@ Personal portfolio for Aditya Walzade, Junior Embedded Engineer.
 Planned GitHub Pages URL:
 
 ```text
-https://adityaw20.github.io/my-portfolio/
+https://adityaw20.github.io/-my-portfolio/
 ```
 
 If the GitHub repository uses a different name, update `docs/robots.txt`, `docs/sitemap.xml`, and the canonical/OG URLs in `docs/index.html`.
@@ -63,3 +63,4 @@ C:\Users\SPI\embedded-project-repos\pashudhan-neck-tag
 - Create separate GitHub repositories for each project
 - Replace `Repo coming soon` labels with actual repository links
 - Export the final resume as a PDF if a direct download button is needed
+
