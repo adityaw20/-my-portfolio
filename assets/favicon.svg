@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07100f"/>
+      <stop offset="1" stop-color="#0b3d39"/>
+    </linearGradient>
+    <linearGradient id="chip" x1="18" y1="16" x2="46" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#66f4e7"/>
+      <stop offset="1" stop-color="#ffb14a"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <path d="M16 10v8M26 10v8M38 10v8M48 10v8M16 46v8M26 46v8M38 46v8M48 46v8M10 16h8M10 26h8M10 38h8M10 48h8M46 16h8M46 26h8M46 38h8M46 48h8" stroke="#66f4e7" stroke-width="3" stroke-linecap="round" opacity=".85"/>
+  <rect x="18" y="18" width="28" height="28" rx="6" fill="#10201d" stroke="url(#chip)" stroke-width="3"/>
+  <path d="M24 39 29 25h4l5 14h-4l-.9-2.8h-4.6l-.9 2.8h-3.6Zm5.4-6h2.8L30.8 29l-1.4 4Z" fill="#66f4e7"/>
+  <path d="M35 25h3.7l2.1 7 2.2-7h3.8l-4.2 14h-3.4L37 32l-2.1 7h-3.4l-4.2-14H31l2.2 7 1.8-7Z" fill="#ffb14a" opacity=".92"/>
+  <circle cx="18" cy="18" r="2.2" fill="#ffb14a"/>
+  <circle cx="46" cy="46" r="2.2" fill="#66f4e7"/>
+</svg>

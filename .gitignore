@@ -1,0 +1,13 @@
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs/cache
+*.log
+.cache/
+
+# Local env/secrets
+.env
+.env.*
