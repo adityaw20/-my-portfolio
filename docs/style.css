@@ -878,3 +878,24 @@ html {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+.project-link {
+  width: fit-content;
+  margin-top: auto;
+  color: #005e59;
+  font-weight: 900;
+  font-size: .92rem;
+  text-decoration: none;
+}
+.project-link:hover {
+  text-decoration: underline;
+}
+.project-card.featured .project-link {
+  color: #a8fff6;
+}
+body.light-theme .project-link {
+  color: #005e59;
+}
+body.light-theme .project-card.featured .project-link {
+  color: #a8fff6;
+}
