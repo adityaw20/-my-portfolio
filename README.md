@@ -10,7 +10,35 @@ Planned GitHub Pages URL:
 https://adityaw20.github.io/my-portfolio/
 ```
 
-If the GitHub repository uses a different name, update `robots.txt`, `sitemap.xml`, and the canonical/OG URLs in `index.html`.
+If the GitHub repository uses a different name, update `docs/robots.txt`, `docs/sitemap.xml`, and the canonical/OG URLs in `docs/index.html`.
+
+## Repository Structure
+
+```text
+my-portfolio/
+├── README.md
+├── .gitignore
+└── docs/
+    ├── index.html
+    ├── resume.html
+    ├── 404.html
+    ├── assets/
+    ├── style.css
+    ├── script.js
+    ├── robots.txt
+    └── sitemap.xml
+```
+
+The website is inside `docs/` so GitHub Pages can deploy from the `/docs` folder.
+
+## GitHub Pages Deployment
+
+1. Open repository **Settings**.
+2. Go to **Pages**.
+3. Select **Deploy from a branch**.
+4. Branch: `main`.
+5. Folder: `/docs`.
+6. Save.
 
 ## Focus
 
@@ -20,29 +48,6 @@ If the GitHub repository uses a different name, update `robots.txt`, `sitemap.xm
 - LoRa, MQTT, UART, SPI, I2C
 - Field-ready embedded and IoT systems
 
-## Pages
-
-- `index.html` - portfolio site
-- `resume.html` - web resume with print/save PDF support
-- `404.html` - GitHub Pages fallback redirect
-
-## GitHub Pages Deployment
-
-1. Create a GitHub repository named `my-portfolio`.
-2. Push this folder to the repository root.
-3. Open repository **Settings**.
-4. Go to **Pages**.
-5. Select **Deploy from a branch**.
-6. Branch: `main`.
-7. Folder: `/root`.
-8. Save.
-
-After deployment, the site should open at:
-
-```text
-https://adityaw20.github.io/my-portfolio/
-```
-
 ## Separate Project Repositories
 
 Project source files are kept outside this portfolio folder so they can be uploaded as separate GitHub repositories later:
@@ -51,8 +56,6 @@ Project source files are kept outside this portfolio folder so they can be uploa
 C:\Users\SPI\embedded-project-repos\onion-storage-management
 C:\Users\SPI\embedded-project-repos\pashudhan-neck-tag
 ```
-
-Each project folder has its own README and `.gitignore`.
 
 ## Pending Before Final Public Release
 
