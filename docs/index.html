@@ -3,218 +3,306 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Aditya Walzade is a Junior Embedded Engineer focused on embedded firmware, sensor interfacing, STM32, ESP32, LoRa, MQTT, and field-ready IoT systems.">
-  <meta name="author" content="Aditya Walzade">
-  <meta name="keywords" content="Aditya Walzade, Junior Embedded Engineer, Embedded C, STM32, ESP32, IoT, LoRa, MQTT, Firmware Engineer">
-  <meta property="og:title" content="Aditya Walzade | Junior Embedded Engineer">
-  <meta property="og:description" content="Embedded firmware, sensor interfacing, IoT systems, STM32, ESP32, LoRa, and MQTT portfolio.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://adityaw20.github.io/-my-portfolio/">
-  <meta property="og:image" content="https://adityaw20.github.io/-my-portfolio/assets/embedded-hero.png">
-  <link rel="canonical" href="https://adityaw20.github.io/-my-portfolio/">
-  <title>Aditya Walzade | Junior Embedded Engineer</title>
+  <title>Aditya Walzade | Embedded Systems & IoT Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="site-bg" aria-hidden="true"><span></span><span></span><span></span></div>
-  <div class="cursor-dot" aria-hidden="true"></div>
-  <div class="cursor-ring" aria-hidden="true"></div>
-  <header class="site-header" id="top">
-    <a class="brand" href="#home" aria-label="Go to home">
-      <span class="brand-mark">AW</span>
-      <span>Aditya Walzade</span>
-    </a>
-    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <nav class="site-nav" aria-label="Main navigation">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-      <button class="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
-        <span class="theme-toggle-track">
-          <span class="theme-toggle-thumb">
-            <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Zm0 4a1 1 0 0 1-1-1v-1.2a1 1 0 1 1 2 0V21a1 1 0 0 1-1 1Zm0-17.8a1 1 0 0 1-1-1V2a1 1 0 1 1 2 0v1.2a1 1 0 0 1-1 1ZM21 13h-1.2a1 1 0 1 1 0-2H21a1 1 0 1 1 0 2ZM4.2 13H3a1 1 0 1 1 0-2h1.2a1 1 0 1 1 0 2Zm13.4 5.6a1 1 0 0 1 0-1.4l.8-.8a1 1 0 1 1 1.4 1.4l-.8.8a1 1 0 0 1-1.4 0ZM4.2 5.6a1 1 0 0 1 1.4-1.4l.8.8A1 1 0 0 1 5 6.4l-.8-.8Zm14.2.8-.8-.8A1 1 0 1 1 19 4.2l.8.8a1 1 0 1 1-1.4 1.4ZM5 19.8a1 1 0 0 1-.7-1.7l.8-.8a1 1 0 1 1 1.4 1.4l-.8.8a1 1 0 0 1-.7.3Z"/></svg>
-            <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 15.4A8.5 8.5 0 0 1 8.6 3.5a.9.9 0 0 0-1-1.4A10.5 10.5 0 1 0 21.9 16.4a.9.9 0 0 0-1.4-1Z"/></svg>
-          </span>
-        </span>
-      </button>
-    </nav>
+<body class="editorial-theme">
+
+  <!-- Background Animated Watermarks -->
+  <div class="bg-watermark watermark-hero" data-parallax="-0.08">EMBEDDED</div>
+  <div class="bg-watermark watermark-mid" data-parallax="-0.12">FIRMWARE</div>
+
+  <!-- Navigation Bar -->
+  <header class="editorial-nav">
+    <div class="nav-container">
+      <a href="#hero" class="brand-badge">
+        <span class="badge-dot"></span>
+        <span class="badge-text">ADITYA.DEV</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Stack</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="resume.html" class="nav-link">Resume</a>
+        <a href="#contact" class="btn-primary-pill">Let's Connect</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="hero" id="home" aria-labelledby="hero-title">
-      <img class="hero-media" src="assets/embedded-hero.png" alt="Embedded systems workbench with circuit board, oscilloscope, and robotics hardware">
-      <div class="hero-overlay"></div>
-      <div class="hero-content reveal">
-        <p class="eyebrow">Junior Embedded Engineer | IoT | Hardware Systems</p>
-        <h1 id="hero-title">
-          <span class="hero-kicker">Hi, I am</span>
-          <span class="interactive-name" aria-label="Aditya Walzade">
-            <span>A</span><span>d</span><span>i</span><span>t</span><span>y</span><span>a</span>
-            <span class="name-gap"></span>
-            <span>W</span><span>a</span><span>l</span><span>z</span><span>a</span><span>d</span><span>e</span>
-          </span>
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="container hero-grid">
+      
+      <!-- Left Column: Typography & Badges -->
+      <div class="hero-typography">
+        <div class="sticker-chip reveal-elem">
+          <span class="chip-star">✦</span> HARDWARE & IOT SPECIALIST
+        </div>
+        
+        <h1 class="poster-title reveal-elem">
+          <span class="quote-mark">“</span>PORT<br>
+          <span class="title-highlight">FOLIO.</span>
         </h1>
-        <p class="hero-copy">
-          Junior Embedded Engineer from Sangamner, Ahilyanagar, open to junior embedded firmware and IoT device roles where I can contribute to reliable sensor-based products, hardware debugging, and field-ready automation systems.
+
+        <p class="hero-subtext reveal-elem">
+          Electronics & Embedded Firmware Engineer transforming bare metal, real-time operating systems, and RF communications into robust connected hardware.
         </p>
-        <div class="hero-actions">
-          <a class="button primary" href="#projects">View Work</a>
-          <a class="button secondary" href="#contact">Contact Me</a>
-          <a class="button secondary" href="resume.html">View Resume</a>
+
+        <div class="hero-action-row reveal-elem">
+          <a href="#projects" class="hero-btn-arrow">
+            <span class="circle-icon">➔</span> Explore Builds
+          </a>
+          <a href="resume.html" class="hero-link-underline">View Resume</a>
         </div>
-        <aside class="hero-console" aria-label="Embedded profile summary">
-          <div class="console-top"><span></span><span></span><span></span></div>
-          <dl>
-            <div><dt>Role</dt><dd>Junior Embedded Engineer</dd></div>
-            <div><dt>Company</dt><dd>Wildrex Solutions</dd></div>
-            <div><dt>Focus</dt><dd>Firmware, IoT, STM32, ESP32</dd></div>
-            <div><dt>Status</dt><dd>Open to embedded roles</dd></div>
-          </dl>
-        </aside>
       </div>
-    </section>
 
-    <section class="section about-section reveal" id="about" data-section="About">
-      <div class="section-heading">
-        <h2>About me</h2>
-      </div>
-      <div class="about-grid">
-        <div class="about-copy">
-          <p>Hi, I am Aditya Walzade, a Junior Embedded Engineer with a BE in Electronics and Telecommunication Engineering completed in 2025.</p>
-          <p>I have been working at Wildrex Solutions Pvt. Ltd., Ahilyanagar since Feb 2026, with hands-on work in embedded systems, IoT workflows, sensing, and automation logic.</p>
-          <p>I am open to junior embedded engineering opportunities where I can work on firmware, sensors, communication protocols, hardware debugging, and field-ready IoT products.</p>
+      <!-- Right Column: Visual Stage & Cutout -->
+      <div class="hero-visual-stage">
+        <div class="floating-badge badge-c" data-parallax="0.06">
+          <img src="assets/c.png" alt="C" />
+          <span>Embedded C</span>
         </div>
-        <aside class="profile-panel reveal-card" aria-label="Portfolio profile highlights">
-          <div class="profile-avatar">AW</div>
-          <h3>Aditya Walzade</h3>
-          <p>Sangamner, Ahilyanagar</p>
-          <ul>
-            <li>Junior Embedded Engineer</li>
-            <li>Wildrex Solutions, Feb 2026 - Present</li>
-            <li>IoT and automation projects</li>
-            <li>BE ENTC, 2025 | CGPA 8.06</li>
-          </ul>
-        </aside>
-      </div>
-    </section>
+        
+        <div class="floating-badge badge-iot" data-parallax="-0.07">
+          <span class="badge-icon">⚡</span>
+          <span>FreeRTOS & ESP-IDF</span>
+        </div>
 
-    <section class="section reveal" id="experience" data-section="Experience">
-      <div class="section-heading">
-        <h2>Experience</h2>
-      </div>
-      <div class="timeline">
-        <article class="timeline-item reveal-card">
-          <time>Feb 2026 - Present</time>
-          <h3>Wildrex Solutions Pvt. Ltd., Ahilyanagar</h3>
-          <p>Worked as a Junior Embedded Engineer on practical embedded systems involving sensor interfacing, controller firmware, hardware debugging, IoT-style monitoring workflows, and field-oriented automation logic.</p>
-        </article>
-        <article class="timeline-item reveal-card">
-          <time>July 2025 - Jan 2026</time>
-          <h3>Advanced Embedded System Course</h3>
-          <p>Completed advanced embedded systems training at TechnoScripts, Pune, with focus on embedded programming, interfaces, and hardware-oriented development.</p>
-        </article>
-        <article class="timeline-item reveal-card">
-          <time>2025</time>
-          <h3>BE Electronics and Telecommunication</h3>
-          <p>Completed Bachelor of Engineering in Electronics and Telecommunication Engineering in 2025 from Dr. Vithalrao Vikhe Patil College of Engineering, Ahilyanagar, with 8.06 CGPA.</p>
-        </article>
-      </div>
-    </section>
+        <div class="floating-badge badge-lora" data-parallax="0.04">
+          <span class="badge-icon">📡</span>
+          <span>LoRaWAN / 868MHz</span>
+        </div>
 
-    <section class="section skills-section reveal" id="skills" data-section="Skills">
-      <div class="section-heading">
-        <h2>Skills and tools</h2>
+        <div class="hero-image-wrapper reveal-elem">
+          <div class="backdrop-arch"></div>
+          <img src="assets/embedded-hero.png" alt="Aditya Walzade" class="hero-cutout-img" />
+          <div class="vintage-year-stamp">AW // 2026</div>
+        </div>
       </div>
-      <div class="skill-icon-grid focused-skills">
-        <article class="skill-icon-card reveal-card"><img src="assets/embedded-c.png" alt="Embedded C"><span>Embedded C</span></article>
-        <article class="skill-icon-card reveal-card"><img src="assets/cpp.png" alt="C and C++"><span>C / C++</span></article>
-        <article class="skill-icon-card reveal-card"><img src="assets/stm32-board.png" alt="STM32"><span>STM32</span></article>
-        <article class="skill-icon-card reveal-card"><img src="assets/stm32cubeide.svg" alt="STM32CubeIDE"><span>STM32CubeIDE</span></article>
-        <article class="skill-icon-card reveal-card"><img src="assets/esp32.svg" alt="ESP32"><span>ESP32</span></article>
-        <article class="skill-icon-card reveal-card"><img src="assets/raspberry-pi.png" alt="Raspberry Pi"><span>Raspberry Pi</span></article>
-        <article class="skill-icon-card reveal-card"><img src="assets/linux.png" alt="Linux"><span>Linux</span></article>
-        <article class="skill-icon-card reveal-card"><img src="assets/freertos.svg" alt="FreeRTOS"><span>FreeRTOS</span></article>
-        <article class="skill-icon-card reveal-card"><img src="assets/uart.svg" alt="UART"><span>UART</span></article>
-        <article class="skill-icon-card reveal-card"><img src="assets/spi.svg" alt="SPI"><span>SPI</span></article>
-        <article class="skill-icon-card reveal-card"><img src="assets/i2c.svg" alt="I2C"><span>I2C</span></article>
-        <article class="skill-icon-card reveal-card"><img src="assets/adc-gpio.svg" alt="ADC and GPIO"><span>ADC / GPIO</span></article>
-        <article class="skill-icon-card reveal-card"><img src="assets/lora.svg" alt="LoRa"><span>LoRa</span></article>
-        <article class="skill-icon-card reveal-card"><img src="assets/mqtt.svg" alt="MQTT"><span>MQTT</span></article>
-      </div>
-    </section>
 
-    <section class="section projects-section reveal" id="projects" data-section="Projects">
-      <div class="section-heading">
-        <h2>Projects</h2>
-      </div>
-      <div class="project-grid">
-        <article class="project-card featured reveal-card">
-          <img class="project-visual" src="assets/osm-architecture.svg" alt="Onion Storage Management architecture diagram">
-          <div class="project-meta">Embedded Storage Monitoring</div>
-          <h3>Onion Storage Management</h3>
-          <p>Multi-zone embedded monitoring system for onion storage. Remote controller nodes read temperature, humidity, CO2, light, gas, and moisture sensors, send data over LoRa, compare readings with thresholds, and drive relay/fan outputs for storage environment control.</p>
-          <a class="project-link" href="https://github.com/adityaw20/onion-storage-management" target="_blank" rel="noopener noreferrer">View repository</a>
-        </article>
-        <article class="project-card reveal-card">
-          <img class="project-visual" src="assets/necktag-architecture.svg" alt="Animal Smart Health Neck Tag architecture diagram">
-          <div class="project-meta">Embedded Livestock Health Device</div>
-          <h3>Animal Smart Health Neck Tag</h3>
-          <p>Wearable embedded neck tag for cattle health tracking. The firmware reads body temperature, motion, GPS, microphone, force, flex, and battery signals, stores trend data locally, and sends health status through LoRa for early abnormal-condition detection.</p>
-          <a class="project-link" href="https://github.com/adityaw20/-pashudhan-neck-tag" target="_blank" rel="noopener noreferrer">View repository</a>
-        </article>
-        <article class="project-card reveal-card">
-          <img class="project-visual" src="assets/irrigation-architecture.svg" alt="Time Based Scheduling Irrigation architecture diagram">
-          <div class="project-meta">Embedded Irrigation Control</div>
-          <h3>Time Based Scheduling Irrigation System</h3>
-          <p>Embedded irrigation controller for scheduled water control. The system uses timer-based logic to switch relay/valve outputs at configured intervals, reducing manual operation in agricultural watering workflows.</p>
-          <span class="project-status">Repo coming soon</span>
-        </article>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="contact-section reveal" id="contact">
-      <div>
-        <p class="eyebrow">Contact</p>
-        <h2>Open to junior embedded engineering opportunities.</h2>
+  <!-- Section 01: About & Bio Grid -->
+  <section id="about" class="section-padding">
+    <div class="container">
+      <div class="section-indicator">
+        <span class="step-number">01</span>
+        <span class="step-divider"></span>
+        <span class="step-label">BIOGRAPHY & WORK</span>
       </div>
-      <div class="contact-actions">
-        <a class="button primary icon-button" href="mailto:adityawalzade203@gmail.com" aria-label="Email Aditya">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm0 3.2 8 5.1 8-5.1V7l-8 5.1L4 7v1.2Z"/></svg>
-          <span>Email</span>
-        </a>
-        <a class="button secondary icon-button" href="tel:+917776067841" aria-label="Call Aditya">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.3 1.3.4 2.6.6 4 .6.7 0 1.2.5 1.2 1.2v3.5c0 .7-.5 1.2-1.2 1.2C10.5 22 2 13.5 2 3.4 2 2.7 2.5 2.2 3.2 2.2h3.5c.7 0 1.2.5 1.2 1.2 0 1.4.2 2.8.6 4 .1.4 0 .9-.3 1.2l-1.6 2.2Z"/></svg>
-          <span>Call</span>
-        </a>
-        <a class="button secondary icon-button" href="https://www.linkedin.com/in/adityawalzade?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.4 8h4.2v14H.4V8Zm7.1 0h4v1.9h.1c.6-1.1 2-2.2 4.1-2.2 4.4 0 5.2 2.9 5.2 6.7V22h-4.2v-6.8c0-1.6 0-3.7-2.3-3.7s-2.6 1.8-2.6 3.6V22H7.5V8Z"/></svg>
-          <span>LinkedIn</span>
-        </a>
-        <a class="button secondary icon-button" href="https://github.com/adityaw20" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub profile">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5A12 12 0 0 0 8.2 23.9c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 .1.8 2.2 3.4 1.6.1-.8.4-1.3.7-1.6-2.6-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>
-          <span>GitHub</span>
-        </a>
-        <a class="button secondary icon-button" href="https://www.instagram.com/adityaw007" target="_blank" rel="noopener noreferrer" aria-label="Open Instagram profile">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm5.2-2.8a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/></svg>
-          <span>Instagram</span>
-        </a>
-      </div>
-    </section>
-  </main>
 
-  <footer class="site-footer">
-    <span>Designed and built by Aditya Walzade</span>
+      <div class="about-poster-grid">
+        <div class="about-card-portrait reveal-elem">
+          <div class="portrait-box">
+            <img src="assets/stm32-board.png" alt="Development Hardware" class="stm-preview-img" />
+            <div class="portrait-footer">
+              <span class="dot-green"></span> Hardware Testbench Active
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content reveal-elem">
+          <h2 class="sub-poster-title">
+            <span class="quote-mark">“</span>HELLO.
+          </h2>
+          <p class="body-text-large">
+            I'm <strong>Aditya Walzade</strong>, an Embedded Systems & IoT Engineer. I architect firmware solutions ranging from register-level peripheral drivers to scalable edge-to-cloud IoT pipelines.
+          </p>
+          <p class="body-text-secondary">
+            With hands-on experience designing reliable systems for asset tracking and telemetry, I combine microcontrollers, low-power radios, and real-time scheduling to build resilient hardware in field environments.
+          </p>
+
+          <div class="specs-grid">
+            <div class="spec-column">
+              <h4 class="spec-heading">Specialization</h4>
+              <p class="spec-value">Firmware Architecture, RTOS Tasks & Power Optimization</p>
+            </div>
+            <div class="spec-column">
+              <h4 class="spec-heading">Hardware Targets</h4>
+              <p class="spec-value">STM32 (ARM Cortex-M), ESP32, Raspberry Pi, Arduino</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 02: Tech Stack -->
+  <section id="skills" class="section-padding bg-tint">
+    <div class="container">
+      <div class="section-indicator">
+        <span class="step-number">02</span>
+        <span class="step-divider"></span>
+        <span class="step-label">CORE TOOLKIT & PROTOCOLS</span>
+      </div>
+
+      <h3 class="poster-heading reveal-elem">TECH REPERTOIRE.</h3>
+
+      <div class="skills-catalog-grid">
+        <div class="catalog-card reveal-elem">
+          <span class="catalog-tag">LANGUAGES</span>
+          <div class="app-icon-stack">
+            <div class="app-pill-btn"><img src="assets/c.png" alt="C" /> C</div>
+            <div class="app-pill-btn"><img src="assets/cpp.png" alt="C++" /> C++</div>
+            <div class="app-pill-btn"><img src="assets/python.png" alt="Python" /> Python</div>
+          </div>
+        </div>
+
+        <div class="catalog-card reveal-elem">
+          <span class="catalog-tag">PLATFORMS & RTOS</span>
+          <div class="app-icon-stack">
+            <div class="app-pill-btn"><img src="assets/stm32cubeide.svg" alt="STM32" /> STM32</div>
+            <div class="app-pill-btn"><img src="assets/esp32.svg" alt="ESP32" /> ESP32</div>
+            <div class="app-pill-btn"><img src="assets/freertos.svg" alt="FreeRTOS" /> FreeRTOS</div>
+            <div class="app-pill-btn"><img src="assets/raspberry-pi.png" alt="RPi" /> Linux RPi</div>
+          </div>
+        </div>
+
+        <div class="catalog-card reveal-elem">
+          <span class="catalog-tag">BUS & RF PROTOCOLS</span>
+          <div class="app-icon-stack">
+            <div class="app-pill-btn"><img src="assets/uart.svg" alt="UART" /> UART</div>
+            <div class="app-pill-btn"><img src="assets/i2c.svg" alt="I2C" /> I2C</div>
+            <div class="app-pill-btn"><img src="assets/spi.svg" alt="SPI" /> SPI</div>
+            <div class="app-pill-btn"><img src="assets/lora.svg" alt="LoRa" /> LoRa / LoRaWAN</div>
+            <div class="app-pill-btn"><img src="assets/mqtt.svg" alt="MQTT" /> MQTT</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 03: Projects Showcase -->
+  <section id="projects" class="section-padding">
+    <div class="container">
+      <div class="section-indicator">
+        <span class="step-number">03</span>
+        <span class="step-divider"></span>
+        <span class="step-label">SELECTED HARDWARE BUILDS</span>
+      </div>
+
+      <div class="projects-editorial-list">
+        <!-- Project 1 -->
+        <article class="project-editorial-card reveal-elem">
+          <div class="project-num-col">
+            <span class="card-large-index">01</span>
+          </div>
+          <div class="project-diagram-col">
+            <div class="diagram-frame">
+              <img src="assets/irrigation-architecture.svg" alt="Irrigation Architecture" />
+            </div>
+          </div>
+          <div class="project-details-col">
+            <div class="tag-row">
+              <span class="chip-label">IoT Agriculture</span>
+              <span class="chip-label">FreeRTOS</span>
+            </div>
+            <h4 class="project-title">Autonomous Smart Irrigation System</h4>
+            <p class="project-desc">
+              Closed-loop telemetry system built on ESP32 and FreeRTOS. Measures soil capacitance, triggers pulse-width controlled relays, and streams live diagnostics via a secure MQTT broker.
+            </p>
+            <ul class="project-feature-list">
+              <li>Low-power deep sleep cycles with RTC wake-up triggers</li>
+              <li>Dual-core task separation: sensing loop & network queue</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-editorial-card reveal-elem">
+          <div class="project-num-col">
+            <span class="card-large-index">02</span>
+          </div>
+          <div class="project-diagram-col">
+            <div class="diagram-frame">
+              <img src="assets/necktag-architecture.svg" alt="Livestock Tracker" />
+            </div>
+          </div>
+          <div class="project-details-col">
+            <div class="tag-row">
+              <span class="chip-label">LoRa</span>
+              <span class="chip-label">Low Power</span>
+            </div>
+            <h4 class="project-title">Rugged Livestock Monitoring Tag</h4>
+            <p class="project-desc">
+              Long-range animal tracking collar node transmitting vitals and motion vectors across rural terrain up to 6 km using sub-GHz LoRa modulation.
+            </p>
+            <ul class="project-feature-list">
+              <li>Sub-microamp standby draw ensuring extended battery lifetime</li>
+              <li>I2C sensor interrupts for fall and panic event detection</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-editorial-card reveal-elem">
+          <div class="project-num-col">
+            <span class="card-large-index">03</span>
+          </div>
+          <div class="project-diagram-col">
+            <div class="diagram-frame">
+              <img src="assets/osm-architecture.svg" alt="Industrial Safety Architecture" />
+            </div>
+          </div>
+          <div class="project-details-col">
+            <div class="tag-row">
+              <span class="chip-label">STM32</span>
+              <span class="chip-label">Safety Critical</span>
+              <span class="chip-label">SPI / I2C</span>
+            </div>
+            <h4 class="project-title">Industrial Operational Safety Monitor</h4>
+            <p class="project-desc">
+              Deterministic sensor acquisition node built on STM32 Cortex-M. Aggregates multi-channel analog inputs, executes hardware threshold checks, and drives fault-tolerant relay shutdown logic.
+            </p>
+            <ul class="project-feature-list">
+              <li>DMA-driven ADC sampling to minimize core CPU cycles</li>
+              <li>Hardware watchdog integration with fail-safe lockout modes</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 04: Contact / Footer Banner -->
+  <footer id="contact" class="poster-footer-section">
+    <div class="container footer-content-wrap">
+      <div class="contact-card-yellow reveal-elem">
+        <div class="contact-card-header">
+          <div class="qr-placeholder">
+            <div class="qr-pattern"></div>
+          </div>
+          <div>
+            <h3 class="contact-title">Let's Work Together.</h3>
+            <p class="contact-subtitle">Available for firmware development, device bring-up, and IoT prototyping.</p>
+          </div>
+        </div>
+
+        <div class="contact-info-list">
+          <a href="mailto:aditya@embedded.dev" class="contact-item contact-link">
+            <span class="contact-icon">✉</span>
+            <span class="contact-val">aditya@embedded.dev</span>
+          </a>
+
+          <a href="https://github.com/AdityaWalzade" target="_blank" rel="noopener noreferrer" class="contact-item contact-link">
+            <span class="contact-icon">⌘</span>
+            <span class="contact-val">github.com/AdityaWalzade</span>
+          </a>
+
+          <a href="https://linkedin.com/in/adityawalzade" target="_blank" rel="noopener noreferrer" class="contact-item contact-link">
+            <span class="contact-icon">↗</span>
+            <span class="contact-val">linkedin.com/in/adityawalzade</span>
+          </a>
+        </div>
+      </div>
+      <p class="copy-line">© 2026 Aditya Walzade. Built with clean CSS and dynamic parallax.</p>
+    </div>
   </footer>
-  <a class="back-to-top" href="#top" aria-label="Back to top">Top</a>
+
   <script src="script.js"></script>
 </body>
 </html>
-
