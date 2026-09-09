@@ -1,20 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Intersection Observer for Smooth Entrance Reveals
+  // 1. Mark JS active to enable progressive animation
+  document.body.classList.add('js-active');
+
   const revealElements = document.querySelectorAll('.reveal-elem');
 
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-        revealObserver.unobserve(entry.target);
-      }
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.05,
+      rootMargin: '50px'
     });
-  }, {
-    threshold: 0.12,
-    rootMargin: '0px 0px -40px 0px'
-  });
 
-  revealElements.forEach((el) => revealObserver.observe(el));
+    revealElements.forEach((el) => revealObserver.observe(el));
+  } else {
+    // Fallback: immediately show everything if observer is unsupported
+    revealElements.forEach((el) => el.classList.add('active'));
+  }
 
   // 2. Mouse Tracking Parallax on Hero Stickers
   const heroSection = document.getElementById('hero');
@@ -41,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. Scroll Parallax for Large Typography Watermarks
+  // 3. Scroll Parallax for Background Typography Watermarks
   const watermarks = document.querySelectorAll('.bg-watermark');
   window.addEventListener('scroll', () => {
     const scrollY = window.pageYOffset;
@@ -53,7 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 4. Modal Lightbox for Architecture Diagrams
   const diagramImages = document.querySelectorAll('.diagram-frame img');
-
   diagramImages.forEach((img) => {
     img.addEventListener('click', () => {
       const overlay = document.createElement('div');
