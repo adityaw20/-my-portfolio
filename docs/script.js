@@ -1,124 +1,90 @@
+document.addEventListener('DOMContentLoaded', () => {
+  // 1. Intersection Observer for Smooth Entrance Reveals
+  const revealElements = document.querySelectorAll('.reveal-elem');
 
-const header = document.querySelector(".site-header");
-const navToggle = document.querySelector(".nav-toggle");
-const navLinks = document.querySelectorAll(".site-nav a");
-const sections = document.querySelectorAll("main section[id]");
-const revealItems = document.querySelectorAll(".reveal, .reveal-card");
-
-navToggle.addEventListener("click", () => {
-  const isOpen = header.classList.toggle("menu-open");
-  navToggle.setAttribute("aria-expanded", String(isOpen));
-});
-
-navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    header.classList.remove("menu-open");
-    navToggle.setAttribute("aria-expanded", "false");
-  });
-});
-
-const navObserver = new IntersectionObserver(
-  (entries) => {
+  const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      navLinks.forEach((link) => {
-        link.classList.toggle("active", link.getAttribute("href") === `#${entry.target.id}`);
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  revealElements.forEach((el) => revealObserver.observe(el));
+
+  // 2. Mouse Tracking Parallax on Hero Stickers
+  const heroSection = document.getElementById('hero');
+  const parallaxBadges = document.querySelectorAll('.floating-badge');
+
+  if (heroSection && window.matchMedia('(pointer: fine)').matches) {
+    heroSection.addEventListener('mousemove', (e) => {
+      const rect = heroSection.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+
+      parallaxBadges.forEach((badge) => {
+        const factor = parseFloat(badge.getAttribute('data-parallax')) || 0.05;
+        const moveX = x * factor;
+        const moveY = y * factor;
+        badge.style.transform = `translate3d(${moveX}px, ${moveY}px, 0)`;
       });
     });
-  },
-  { rootMargin: "-38% 0px -55% 0px" }
-);
 
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add("is-visible");
-      revealObserver.unobserve(entry.target);
+    heroSection.addEventListener('mouseleave', () => {
+      parallaxBadges.forEach((badge) => {
+        badge.style.transform = 'translate3d(0, 0, 0)';
+      });
     });
-  },
-  { threshold: 0.14 }
-);
-
-sections.forEach((section) => navObserver.observe(section));
-revealItems.forEach((item) => revealObserver.observe(item));
-
-
-const cursorDot = document.querySelector(".cursor-dot");
-const cursorRing = document.querySelector(".cursor-ring");
-const hoverTargets = document.querySelectorAll("a, button, .skill-icon-card, .project-card, .interactive-name span:not(.name-gap)");
-
-if (cursorDot && cursorRing && window.matchMedia("(pointer: fine)").matches) {
-  let ringX = window.innerWidth / 2;
-  let ringY = window.innerHeight / 2;
-  let mouseX = ringX;
-  let mouseY = ringY;
-
-  document.addEventListener("mousemove", (event) => {
-    mouseX = event.clientX;
-    mouseY = event.clientY;
-    cursorDot.style.left = `${mouseX}px`;
-    cursorDot.style.top = `${mouseY}px`;
-  });
-
-  const animateCursor = () => {
-    ringX += (mouseX - ringX) * 0.18;
-    ringY += (mouseY - ringY) * 0.18;
-    cursorRing.style.left = `${ringX}px`;
-    cursorRing.style.top = `${ringY}px`;
-    requestAnimationFrame(animateCursor);
-  };
-  animateCursor();
-
-  hoverTargets.forEach((target) => {
-    target.addEventListener("mouseenter", () => cursorRing.classList.add("cursor-hover"));
-    target.addEventListener("mouseleave", () => cursorRing.classList.remove("cursor-hover"));
-  });
-}
-
-
-const themeToggle = document.querySelector(".theme-toggle");
-const storedTheme = localStorage.getItem("portfolio-theme");
-const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
-
-function applyTheme(theme) {
-  const isLight = theme === "light";
-  document.body.classList.toggle("light-theme", isLight);
-  if (themeToggle) {
-    themeToggle.setAttribute("aria-pressed", String(isLight));
-    themeToggle.setAttribute("aria-label", isLight ? "Switch to dark theme" : "Switch to light theme");
   }
-}
 
-applyTheme(storedTheme || (prefersLight ? "light" : "dark"));
+  // 3. Scroll Parallax for Large Typography Watermarks
+  const watermarks = document.querySelectorAll('.bg-watermark');
+  window.addEventListener('scroll', () => {
+    const scrollY = window.pageYOffset;
+    watermarks.forEach((wm) => {
+      const rate = parseFloat(wm.getAttribute('data-parallax')) || -0.1;
+      wm.style.transform = `translate3d(0, ${scrollY * rate}px, 0)`;
+    });
+  }, { passive: true });
 
-if (themeToggle) {
-  themeToggle.addEventListener("click", () => {
-    const nextTheme = document.body.classList.contains("light-theme") ? "dark" : "light";
-    localStorage.setItem("portfolio-theme", nextTheme);
-    applyTheme(nextTheme);
-  });
-}
+  // 4. Modal Lightbox for Architecture Diagrams
+  const diagramImages = document.querySelectorAll('.diagram-frame img');
 
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", (event) => {
-    const targetId = anchor.getAttribute("href");
-    if (!targetId || targetId === "#") return;
-    const target = targetId === "#top" ? document.body : document.querySelector(targetId);
-    if (!target) return;
-    event.preventDefault();
-    window.scrollTo({
-      top: targetId === "#top" ? 0 : target.getBoundingClientRect().top + window.scrollY - 88,
-      behavior: "smooth",
+  diagramImages.forEach((img) => {
+    img.addEventListener('click', () => {
+      const overlay = document.createElement('div');
+      overlay.style.position = 'fixed';
+      overlay.style.inset = '0';
+      overlay.style.backgroundColor = 'rgba(27, 26, 23, 0.85)';
+      overlay.style.backdropFilter = 'blur(6px)';
+      overlay.style.zIndex = '1000';
+      overlay.style.display = 'flex';
+      overlay.style.alignItems = 'center';
+      overlay.style.justifyContent = 'center';
+      overlay.style.padding = '2rem';
+      overlay.style.cursor = 'zoom-out';
+
+      const fullImg = document.createElement('img');
+      fullImg.src = img.src;
+      fullImg.alt = img.alt;
+      fullImg.style.maxWidth = '90vw';
+      fullImg.style.maxHeight = '85vh';
+      fullImg.style.backgroundColor = '#fff';
+      fullImg.style.border = '3px solid #f59e0b';
+      fullImg.style.borderRadius = '12px';
+      fullImg.style.padding = '1.5rem';
+      fullImg.style.boxShadow = '0 20px 40px rgba(0,0,0,0.3)';
+
+      overlay.appendChild(fullImg);
+      document.body.appendChild(overlay);
+
+      overlay.addEventListener('click', () => {
+        overlay.remove();
+      });
     });
   });
 });
-
-const backToTop = document.querySelector(".back-to-top");
-if (backToTop) {
-  const syncBackToTop = () => {
-    backToTop.classList.toggle("is-visible", window.scrollY > 520);
-  };
-  syncBackToTop();
-  window.addEventListener("scroll", syncBackToTop, { passive: true });
-}
