@@ -731,7 +731,7 @@ body.editorial-theme {
   background: var(--bg-card);
 }
 
-/* Visibility Fix: Visible by default, animated when js-active is present */
+/* Visibility: Always visible by default */
 .reveal-elem {
   opacity: 1;
   transform: translateY(0);
