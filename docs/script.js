@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Mark JS active to enable progressive animation
+  // 1. Mark JS active only after DOM is ready
   document.body.classList.add('js-active');
 
   const revealElements = document.querySelectorAll('.reveal-elem');
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     revealElements.forEach((el) => revealObserver.observe(el));
   } else {
-    // Fallback: immediately show everything if observer is unsupported
+    // Fallback: Show elements if observer is unavailable
     revealElements.forEach((el) => el.classList.add('active'));
   }
 
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. Scroll Parallax for Background Typography Watermarks
+  // 3. Scroll Parallax for Large Typography Watermarks
   const watermarks = document.querySelectorAll('.bg-watermark');
   window.addEventListener('scroll', () => {
     const scrollY = window.pageYOffset;
