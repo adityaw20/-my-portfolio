@@ -157,12 +157,15 @@ body.editorial-theme {
 
 .poster-title {
   font-family: var(--font-display);
-  font-size: clamp(3.75rem, 8vw, 6.5rem);
+  font-size: clamp(3.2rem, 7vw, 5.6rem);
   font-weight: 900;
-  line-height: 0.92;
+  line-height: 0.95;
   letter-spacing: -0.04em;
   color: var(--text-dark);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+}
+.hero-name-title {
+  text-transform: uppercase;
 }
 .title-highlight {
   color: var(--brand-yellow);
@@ -172,6 +175,29 @@ body.editorial-theme {
   color: var(--brand-yellow);
   font-size: 0.8em;
 }
+
+.hero-role-subtag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+.subtag-pill {
+  background: var(--text-dark);
+  color: #fff;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+}
+.subtag-divider {
+  color: var(--brand-yellow);
+}
+.subtag-text {
+  color: var(--text-muted);
+}
+
 .hero-subtext {
   font-size: 1.15rem;
   color: var(--text-muted);
