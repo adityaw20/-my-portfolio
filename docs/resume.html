@@ -3,106 +3,133 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aditya Walzade | Resume</title>
+  <title>Resume | Aditya Walzade</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{--ink:#111827;--muted:#4b5563;--brand:#075e59;--brand-dark:#0f2f2d;--accent:#d98b19;--paper:#fffdf8;--bg:#efe9dd;--line:#d5ded9;--soft:#eef7f3;--soft-2:#fff4df}
-    *{box-sizing:border-box}body{margin:0;background:linear-gradient(135deg,#efe9dd 0%,#f7f0e4 45%,#e3f0ec 100%);color:var(--ink);font-family:Inter,Arial,sans-serif;font-size:13.5px;line-height:1.42}.page{position:relative;width:min(900px,calc(100% - 28px));margin:22px auto;padding:30px 34px;background:var(--paper);border:1px solid rgba(7,94,89,.2);box-shadow:0 22px 55px rgba(17,24,39,.14);overflow:hidden}.page:before{content:"";position:absolute;inset:0 0 auto;height:7px;background:linear-gradient(90deg,var(--brand),#2fb7a4,var(--accent))}header{padding:10px 0 14px;border-bottom:2px solid var(--brand);margin-bottom:13px}.topline{display:flex;align-items:flex-start;justify-content:space-between;gap:18px}h1{margin:0 0 5px;font-size:36px;line-height:1;font-weight:800;color:#0f172a;letter-spacing:.01em}.role{margin:0;color:var(--brand);font-size:15px;font-weight:800}.contact{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}.contact a,.contact span{display:inline-flex;align-items:center;min-height:25px;padding:4px 9px;border:1px solid rgba(7,94,89,.18);border-radius:999px;background:#ffffff;color:#334155;font-size:12.4px;font-weight:700;text-decoration:none}.contact a:hover{color:var(--brand);border-color:rgba(7,94,89,.38)}.fit{display:flex;flex-wrap:wrap;gap:6px;margin-top:11px}.fit span{padding:5px 8px;border-radius:7px;background:var(--soft);color:var(--brand-dark);font-size:12px;font-weight:800;border:1px solid rgba(7,94,89,.12)}h2{display:flex;align-items:center;gap:9px;margin:16px 0 8px;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--brand)}h2:before{content:"";width:8px;height:18px;border-radius:999px;background:linear-gradient(180deg,var(--brand),var(--accent))}h3{margin:0 0 3px;font-size:14.5px;color:#102b2a}.row{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:start}.date{white-space:nowrap;color:var(--brand-dark);font-size:12.3px;font-weight:800;background:var(--soft-2);padding:4px 8px;border-radius:7px}p{margin:0 0 6px}.summary{padding:10px 12px;border:1px solid rgba(7,94,89,.16);border-radius:12px;background:linear-gradient(135deg,#f8fffc 0%,#fff8ec 100%)}.summary p:last-child{margin-bottom:0}.item{margin-bottom:10px}.item:last-child{margin-bottom:0}ul{margin:5px 0 0;padding-left:18px}li{margin:2px 0}.skills{display:grid;gap:5px}.skill-line{display:grid;grid-template-columns:168px 1fr;gap:10px;padding:5px 0;border-bottom:1px solid rgba(7,94,89,.1)}.skill-line:last-child{border-bottom:0}.skill-line strong{color:var(--brand-dark)}.project{padding:10px 12px;border:1px solid rgba(7,94,89,.14);border-radius:12px;background:#fff}.project + .project{margin-top:8px}.project h3{display:flex;align-items:center;gap:8px}.project h3:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent)}.edu-grid{display:grid;grid-template-columns:1fr auto;gap:8px}.compact{margin:3px 0;color:var(--muted)}.actions{display:flex;gap:10px;margin-top:17px}.btn{display:inline-block;padding:9px 12px;border-radius:8px;background:var(--brand);color:#fff;font-weight:800;text-decoration:none}.btn.secondary{background:#1f2937}@media print{body{background:#fff;font-size:11.5px}.page{width:auto;margin:0;padding:8mm 10mm;border:0;box-shadow:none}.page:before{height:4px}h1{font-size:28px}header{padding-top:4px}.contact a,.contact span{border:0;background:transparent;padding:0 8px 0 0}.fit span{padding:3px 6px}.summary,.project{background:#fff;border-color:#ddd}h2{margin-top:11px}.actions{display:none}.item,.skill-line,.project{break-inside:avoid}a{color:inherit}}@media(max-width:720px){.page{width:min(100% - 18px,900px);margin:10px auto;padding:22px 18px}.topline,.row,.edu-grid,.skill-line{display:block}.date{display:inline-block;margin-top:4px}.contact a,.contact span{font-size:12px}.actions{flex-direction:column}.btn{text-align:center}}
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <main class="page">
-    <header>
-      <div class="topline">
-        <div>
-          <h1>Aditya Walzade</h1>
-          <p class="role">Junior Embedded Engineer</p>
+<body class="editorial-theme">
+
+  <!-- Header -->
+  <header class="editorial-nav">
+    <div class="nav-container">
+      <a href="index.html" class="brand-badge">
+        <span class="badge-dot"></span>
+        <span class="badge-text">ADITYA.DEV</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html#projects" class="nav-link">Projects</a>
+        <a href="index.html#skills" class="nav-link">Stack</a>
+        <a href="index.html" class="btn-primary-pill">← Return Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section-padding" style="padding-top: 8.5rem;">
+    <div class="container" style="max-width: 900px;">
+      
+      <!-- Top Title Block -->
+      <div class="resume-header-block reveal-elem">
+        <div class="sticker-chip">
+          <span class="chip-star">✦</span> CURRICULUM VITAE
+        </div>
+        <h1 class="poster-title" style="font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 0.5rem;">
+          ENGINEERING<br>
+          <span class="title-highlight">EXPERIENCE.</span>
+        </h1>
+        <p class="body-text-secondary">
+          Embedded Systems Engineer specialized in ARM Cortex-M microcontrollers, FreeRTOS, and low-power RF communication stacks.
+        </p>
+
+        <!-- Download & Print Actions -->
+        <div class="resume-download-bar" style="margin-top: 1.5rem;">
+          <a href="assets/Aditya_Walzade_Resume.pdf" download="Aditya_Walzade_Resume.pdf" class="btn-download-pdf">
+            <span class="download-icon">📥</span>
+            <span>Download PDF Resume</span>
+            <span class="download-badge">PDF</span>
+          </a>
+          <button onclick="window.print()" class="btn-print-action">
+            <span class="print-icon">🖨️</span> Print
+          </button>
         </div>
       </div>
-      <div class="contact">
-        <a href="tel:+917776067841">Phone</a>
-        <a href="mailto:adityawalzade203@gmail.com">Email</a>
-        <span>Sangamner, Ahilyanagar</span>
-        <a href="https://github.com/adityaw20" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/adityawalzade" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      </div>
-      <div class="fit"><span>Embedded C/C++</span><span>STM32 / ESP32</span><span>Sensor Interfacing</span><span>LoRa / MQTT</span><span>Hardware Debugging</span></div>
-    </header>
 
-    <section>
-      <h2>Profile Summary</h2>
-      <div class="summary">
-        <p>Junior Embedded Engineer with hands-on exposure to firmware development, sensor interfacing, communication protocols, and hardware debugging through industry work at Wildrex Solutions Pvt. Ltd. and embedded system projects.</p>
-        <p>Comfortable building practical microcontroller-based systems from sensor input to control output: reading real-world signals, handling UART/SPI/I2C communication, applying threshold logic, debugging hardware behavior, and validating system response.</p>
-        <p>Looking to contribute to embedded firmware, IoT device development, hardware bring-up, and field-ready product engineering using STM32, ESP32, Arduino, Raspberry Pi, LoRa, MQTT, ADC, GPIO, PWM, and CAN.</p>
-      </div>
-    </section>
+      <!-- Section: Work History -->
+      <section class="resume-section reveal-elem">
+        <div class="section-indicator" style="margin-bottom: 1.5rem;">
+          <span class="step-number">01</span>
+          <span class="step-divider"></span>
+          <span class="step-label">PROFESSIONAL EXPERIENCE</span>
+        </div>
 
-    <section>
-      <h2>Experience</h2>
-      <div class="item row">
-        <div>
-          <h3>Junior Embedded Engineer - Wildrex Solutions Pvt. Ltd., Ahilyanagar</h3>
-          <ul>
-            <li>Work on embedded firmware, sensor interfacing, controller logic, and hardware debugging for field-oriented systems.</li>
-            <li>Handle communication workflows, relay/control logic, and IoT monitoring requirements for practical automation use cases.</li>
-            <li>Contribute to testing, troubleshooting, and improving reliability of embedded hardware and firmware behavior.</li>
+        <div class="resume-card">
+          <div class="resume-card-head">
+            <div>
+              <h3 class="resume-role">Embedded Systems Engineer</h3>
+              <p class="resume-company">Wildrex Solutions</p>
+            </div>
+            <span class="resume-period">Present</span>
+          </div>
+          <ul class="resume-bullets">
+            <li>Design and deploy bare-metal and RTOS firmware for ARM Cortex-M (STM32) and ESP32 targets.</li>
+            <li>Implement peripheral device drivers across I2C, SPI, and UART interfaces with DMA support.</li>
+            <li>Perform hardware bring-up, signal verification, and debugging using logic analyzers and oscilloscopes.</li>
           </ul>
         </div>
-        <div class="date">Feb 2026 - Present</div>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <h2>Technical Skills</h2>
-      <div class="skills">
-        <div class="skill-line"><strong>Firmware</strong><span>Embedded C, C, C++, bare-metal firmware, basic FreeRTOS concepts, GPIO, timers, interrupts, PWM, ADC, DMA, flash memory.</span></div>
-        <div class="skill-line"><strong>Controllers</strong><span>STM32 with HAL/LL, ESP32/ESP32-S3, Arduino ATmega, Raspberry Pi, PIC18F4580, ARM7 LPC2148.</span></div>
-        <div class="skill-line"><strong>Protocols</strong><span>UART, SPI, I2C, CAN, LoRa SX1276/SX1278, MQTT, JSON packets, GSM/SIM800, Wi-Fi monitoring.</span></div>
-        <div class="skill-line"><strong>Electronics</strong><span>Analog/digital electronics, MOSFETs, BJTs, op-amps, voltage regulators, schematic reading, basic PCB layout, Proteus simulation.</span></div>
-        <div class="skill-line"><strong>Tools</strong><span>STM32CubeIDE, Arduino IDE, Keil uVision, MPLAB X, Git, GitHub, Linux command line, Python scripting, UART/log debugging.</span></div>
-      </div>
-    </section>
+      <!-- Section: Education -->
+      <section class="resume-section reveal-elem">
+        <div class="section-indicator" style="margin-bottom: 1.5rem;">
+          <span class="step-number">02</span>
+          <span class="step-divider"></span>
+          <span class="step-label">ACADEMIC BACKGROUND</span>
+        </div>
 
-    <section>
-      <h2>Selected Embedded Projects</h2>
-      <div class="project">
-        <h3>Onion Storage Management</h3>
-        <ul>
-          <li>Built a multi-zone embedded monitoring concept for onion storage with remote controller nodes and LoRa communication.</li>
-          <li>Reads temperature, humidity, CO2, light, gas, and moisture data, compares values with thresholds, and drives relay/fan outputs.</li>
-          <li>Designed the embedded flow around sensor acquisition, local decision logic, communication reliability, and actuator control for storage safety.</li>
-        </ul>
-      </div>
-      <div class="project">
-        <h3>Animal Smart Health Neck Tag</h3>
-        <ul>
-          <li>Developed wearable cattle health firmware that reads body temperature, motion, GPS, microphone, force, flex, and battery signals.</li>
-          <li>Stores trend data locally and sends health status through LoRa for early abnormal-condition detection.</li>
-          <li>Focused on low-power wearable device behavior, sensor calibration, status reporting, and reliable data capture from cattle movement and health signals.</li>
-        </ul>
-      </div>
-    </section>
+        <div class="resume-card">
+          <div class="resume-card-head">
+            <div>
+              <h3 class="resume-role">Bachelor of Engineering: Electronics & Telecommunication</h3>
+              <p class="resume-company">Dr. Vithalrao Vikhe Patil College of Engineering, Ahilyanagar</p>
+            </div>
+            <span class="resume-period">Graduated</span>
+          </div>
+          <p class="body-text-secondary" style="margin-top: 0.5rem; margin-bottom: 0;">
+            Focused on Embedded Hardware Architecture, Microcontrollers, Signal Processing, and Wireless Communication Systems.
+          </p>
+        </div>
+      </section>
 
-    <section>
-      <h2>Education</h2>
-      <div class="item edu-grid"><div><h3>BE Electronics and Telecommunication Engineering</h3><p class="compact">Dr. Vithalrao Vikhe Patil College of Engineering, Ahilyanagar | CGPA: 8.06</p></div><div class="date">2021 - 2025</div></div>
-      <p class="compact"><strong>HSC (12th) - MSBSHSE:</strong> 81.33% &nbsp; | &nbsp; <strong>SSC (10th) - MSBSHSE:</strong> 88.20%</p>
-    </section>
+      <!-- Section: Core Capabilities Grid -->
+      <section class="resume-section reveal-elem">
+        <div class="section-indicator" style="margin-bottom: 1.5rem;">
+          <span class="step-number">03</span>
+          <span class="step-divider"></span>
+          <span class="step-label">FIRMWARE & HARDWARE STACK</span>
+        </div>
 
-    <section>
-      <h2>Certifications</h2>
-      <ul>
-        <li>Advanced Embedded Systems Training - TechnoScripts, Pune</li>
-        <li>C Programming Certification - TechnoScripts</li>
-      </ul>
-    </section>
+        <div class="specs-grid" style="border-top: none; padding-top: 0;">
+          <div class="catalog-card" style="box-shadow: 2px 3px 0 var(--text-dark);">
+            <h4 class="spec-heading">Firmware Development</h4>
+            <p class="spec-value">Embedded C, C++, FreeRTOS, ESP-IDF, STM32CubeIDE, HAL & LL Drivers</p>
+          </div>
+          <div class="catalog-card" style="box-shadow: 2px 3px 0 var(--text-dark);">
+            <h4 class="spec-heading">Hardware & Interfaces</h4>
+            <p class="spec-value">UART, SPI, I2C, LoRaWAN (868/915 MHz), MQTT, BLE, ADC/GPIO Sensors</p>
+          </div>
+        </div>
+      </section>
 
-    <div class="actions"><a class="btn secondary" href="index.html">Back to portfolio</a><a class="btn" href="javascript:window.print()">Print / Save PDF</a></div>
+    </div>
   </main>
+
+  <footer class="poster-footer-section" style="padding-top: 2rem;">
+    <div class="container" style="text-align: center;">
+      <p class="copy-line">© 2026 Aditya Walzade. Built with clean CSS and dynamic parallax.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
-
